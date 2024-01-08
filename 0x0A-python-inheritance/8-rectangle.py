@@ -1,33 +1,19 @@
 #!/usr/bin/python3
-"""Implementation of the 'rectangle' class that inherits from 'BaseGeometry'
-"""
-
-'''
-Project Title: 0x0A-python-inheritance
-Status: Submitted.
-'''
+"""Defines a class Rectangle that inherits from BaseGeometry."""
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """
-    # Write a class Rectangle that inherits from BaseGeometry..
-    # ....(7-base_geometry.py).
-    # Instantiation with width and height: def __init__(self, width, height):
-    # VARIABLE(" "):
-    # Rectangle(BaseGeometry): Rectangle
-    # width and height must be private. No getter or setter
-    # width and height must be positive integers, validated...
-    # ....by integer_validator....
-    # Return: Always 0. (Success)
-    """
-    """
-    The 'Rectangle' class has a constructor '__init__' that takes 'width' and
-    ...'height' as parameters. The width and height are set as private...
-    attributes('_-width' and 'height')within the class. The 'integer_
-    ..validator' method from the 'BaseGeometry' class is called to validate
-    ..the width and height, ensuring they are positive integers"""
+    """Represent a rectangle using BaseGeometry."""
+
     def __init__(self, width, height):
-        self.__width = width
-        self.__height = height
+        """Intialize a new Rectangle.
+
+        Args:
+            width (int): The width of the new Rectangle.
+            height (int): The height of the new Rectangle.
+        """
         self.integer_validator("width", width)
+        self.__width = width
         self.integer_validator("height", height)
+        self.__height = height
